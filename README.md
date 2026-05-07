@@ -32,6 +32,12 @@ Do not skip labs — each one builds on the previous.
 
 ## Labs
 
+**Start Here:**
+| Lab | Topic |
+|-----|-------|
+| [Lab 00](labs/lab00-fastapi-fundamentals/) | **📖 REFERENCE** — FastAPI Fundamentals & Decorators |
+
+**Hands-On Labs:**
 | Lab | Topic |
 |-----|-------|
 | [Lab 01](labs/lab01-setup/) | Environment Setup & Hello World |
