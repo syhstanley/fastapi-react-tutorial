@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Lab 06: Summary Stats & Category Filter ==="
+echo ""
+
+echo "Next steps:"
+echo ""
+echo "Backend (routers/transactions.py):"
+echo "  1. Add GET /summary — BEFORE any route with a path parameter"
+echo "     Returns: {total_income, total_expense, balance}"
+echo "     Use: from sqlalchemy import func"
+echo "          db.query(func.sum(Transaction.amount)).filter(...).scalar() or 0.0"
+echo ""
+echo "  2. Add optional ?category= query param to GET /"
+echo "     If provided: filter transactions by category (exact match)"
+echo ""
+echo "Frontend:"
+echo "  1. Add summary bar: Total Income / Total Expense / Balance"
+echo "     Fetch GET /transactions/summary on load and after mutations"
+echo "  2. Add category dropdown above transaction list"
+echo "     Options: 'All' + unique categories from transaction list"
+echo "     Filter client-side (no new API call needed)"
+echo ""
+echo "Run ./check.sh when the server is running."

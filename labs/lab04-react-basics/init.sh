@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Lab 04: React Basics & Fetching Data ==="
+echo ""
+
+BACKEND="${1:-budget-tracker/backend}"
+FRONTEND="${1:-budget-tracker/frontend}"
+
+echo "Next steps:"
+echo ""
+echo "Backend ($BACKEND/main.py):"
+echo "  Add CORSMiddleware BEFORE include_router calls:"
+echo "    from fastapi.middleware.cors import CORSMiddleware"
+echo "    app.add_middleware("
+echo "        CORSMiddleware,"
+echo "        allow_origins=['http://localhost:5173'],"
+echo "        allow_methods=['*'],"
+echo "        allow_headers=['*'],"
+echo "    )"
+echo ""
+echo "Frontend (budget-tracker/frontend/src/):"
+echo "  1. Create TransactionList.jsx"
+echo "     - useEffect to fetch GET http://localhost:8000/transactions on mount"
+echo "     - useState to store transactions"
+echo "     - Render each transaction: date, category, type, amount"
+echo "     - Show total count"
+echo "     - Show 'No transactions yet.' when empty"
+echo "  2. Update App.jsx to render <TransactionList />"
+echo ""
+echo "Run ./check.sh when both servers are running."

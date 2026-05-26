@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Lab 08: New Feature with a Separate Router ==="
+echo ""
+echo "This lab is an open design challenge — no scaffold provided."
+echo ""
+echo "Your task: implement Budget Limits with a separate router."
+echo ""
+echo "Things to decide:"
+echo "  - What file(s) will your budget router live in?"
+echo "  - What will your endpoint paths look like?"
+echo "  - What will your request/response shapes look like?"
+echo "  - Where will your SQLAlchemy Budget model go?"
+echo ""
+echo "Constraints:"
+echo "  - Budget logic must be in a separate router from transactions"
+echo "  - Both routers must be mounted in main.py"
+echo ""
+echo "Run ./check.sh when the server is running."

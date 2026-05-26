@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Lab 01: Environment Setup ==="
+echo ""
+echo "This lab has no scaffold — you set everything up from scratch."
+echo ""
+echo "Steps:"
+echo "  1. Install uv:  curl -LsSf https://astral.sh/uv/install.sh | sh"
+echo "  2. mkdir budget-tracker && cd budget-tracker"
+echo "  3. mkdir backend && cd backend"
+echo "  4. uv init"
+echo "  5. uv add fastapi uvicorn"
+echo "  6. Create main.py with GET /health returning {\"status\": \"ok\"}"
+echo "  7. uv run uvicorn main:app --reload"
+echo ""
+echo "  In a new terminal:"
+echo "  8. mkdir frontend && cd frontend (from budget-tracker/)"
+echo "  9. npm create vite@latest . -- --template react"
+echo " 10. npm install && npm run dev"
+echo ""
+echo "Run ./check.sh when both servers are running."
