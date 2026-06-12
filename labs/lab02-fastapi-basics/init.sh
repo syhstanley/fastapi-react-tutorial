@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+# 不管從哪個目錄執行，都能找到正確路徑
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+
 echo "=== Lab 02: FastAPI Routes & Pydantic Schemas ==="
 echo ""
 
-BACKEND="${1:-budget-tracker/backend}"
+BACKEND="${1:-$REPO_ROOT/budget-tracker/backend}"
 
 if [ ! -d "$BACKEND" ]; then
   echo "Error: backend directory not found at $BACKEND"

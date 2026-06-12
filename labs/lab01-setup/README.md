@@ -32,21 +32,24 @@ Vite is a frontend build tool. `npm create vite@latest` scaffolds a React projec
 By the end of this lab, your folder structure should look like:
 
 ```
-budget-tracker/
-├── backend/
-│   ├── pyproject.toml   ← created by uv init
-│   ├── main.py          ← you create this
-│   └── .venv/           ← created automatically by uv
-└── frontend/
-    ├── package.json
-    ├── index.html
-    └── src/
-        └── App.jsx
+fastapi-react-tutorial/       ← repo root (you cloned this)
+└── budget-tracker/           ← you create this here
+    ├── backend/
+    │   ├── pyproject.toml   ← created by uv init
+    │   ├── main.py          ← you create this
+    │   └── .venv/           ← created automatically by uv
+    └── frontend/
+        ├── package.json
+        ├── index.html
+        └── src/
+            └── App.jsx
 ```
 
 ## Step-by-Step Guide
 
 ### 1. Install uv
+
+`uv` is a global tool — install it once for your whole machine:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -54,7 +57,11 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 Restart your terminal after installing. Verify: `uv --version`
 
+> `uv` itself is installed globally (`~/.local/bin/uv`). The `.venv/` virtual environment it creates lives inside your project folder.
+
 ### 2. Set up the backend
+
+**Run these commands from the repo root** (the `fastapi-react-tutorial/` directory):
 
 ```bash
 mkdir budget-tracker && cd budget-tracker
@@ -88,9 +95,10 @@ uv run uvicorn main:app --reload
 
 ### 4. Set up the frontend
 
-Open a **new terminal tab**, navigate to `budget-tracker/`:
+Open a **new terminal tab**, navigate to `budget-tracker/` inside the repo:
 
 ```bash
+cd fastapi-react-tutorial/budget-tracker
 mkdir frontend && cd frontend
 npm create vite@latest . -- --template react
 npm install
@@ -108,6 +116,7 @@ Keep two terminal tabs open — one for the backend, one for the frontend. You'l
 - Swagger UI is at `http://localhost:8000/docs` — use it to test your API without curl
 - If port 8000 is taken: `uv run uvicorn main:app --reload --port 8001`
 - `uv run` automatically activates the virtual environment — no need to run `source .venv/bin/activate`
+- All subsequent lab scripts assume `budget-tracker/` lives inside the repo root
 
 ---
 
